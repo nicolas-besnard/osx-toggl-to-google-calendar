@@ -17,19 +17,16 @@ PODS:
   - AFNetworking/Reachability (2.5.1)
   - AFNetworking/Security (2.5.1)
   - AFNetworking/Serialization (2.5.1)
-  - Alamofire (1.1.4)
   - SwiftyJSON (2.1.3)
   - SwiftyUserDefaults (1.0.0)
 
 DEPENDENCIES:
   - AFNetworking
-  - Alamofire
   - SwiftyJSON (= 2.1.3)
   - SwiftyUserDefaults
 
 SPEC CHECKSUMS:
   AFNetworking: 8bee59492a6ff15d69130efa4d0dc67e0094a52a
-  Alamofire: 524225da382071ee3e6d0badd0ee4b4dc36740de
   SwiftyJSON: 48be7490a3989a58a3f511cd54167f0a2b466e76
   SwiftyUserDefaults: c13a0c5a00d03da70d68ac7b05dbea548c64d87b
 
