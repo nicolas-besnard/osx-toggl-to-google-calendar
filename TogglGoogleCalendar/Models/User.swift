@@ -12,7 +12,6 @@ import SwiftyUserDefaults
 class User {
     var token : String! {
         get {
-
             if let token = Defaults["user_apiToken"].string {
                 return token
             }

@@ -12,14 +12,17 @@ class MainMenu: NSWindow {
     @IBOutlet weak var emailTextField: NSTextField!
     @IBOutlet weak var passwordTextField: NSSecureTextField!
     
-    @IBOutlet weak var tokenLabel: NSTextField!
+    @IBOutlet weak var loginButton: NSButton!
     
     
     @IBAction func clickLogin(sender: AnyObject) {
         let email = emailTextField.stringValue
         let password = passwordTextField.stringValue
         
-        println("Click")
-        Context.shared.userService.loginWithEmail(email, password: password)
+        loginButton.enabled = false
+        
+        Context.shared.userService.loginWithEmail(email, password: password) { () -> Void in
+            self.loginButton.enabled = true
+        }
     }
 }

@@ -9,23 +9,30 @@
 import Foundation
 import SwiftyJSON
 
+typealias ServiceResponse = (() -> Void)!
+
 class UserService: BaseService {
-    func loginWithAPIToken(apiToken: String) {
+    func loginWithAPIToken(apiToken: String, onComplete: ServiceResponse) {
         setAPIToken(apiToken)
-        login()
+        login(onComplete: onComplete)
     }
     
-    func loginWithEmail(email: String, password: String) {
+    func loginWithEmail(email: String, password: String, onComplete: ServiceResponse) {
         setUserAuthorization(email, password: password)
-        login()
+        login(onComplete: onComplete)
     }
     
-    private func login() {
+    private func login(#onComplete: ServiceResponse) {
         manager.GET("https://www.toggl.com/api/v8/me", parameters: nil, success: { (operation, responseObject: AnyObject!) -> Void in
             let json = JSON(responseObject)
             let token = json["data"]["api_token"].stringValue
             println("TOKEN ! \(token)")
             Context.shared.user.token = token
+            
+            if ((onComplete) != nil) {
+                println("CALLBACK")
+                onComplete()
+            }
         }) { (operation, error) -> Void in
             println("-- ERROR --")
             println(operation)
