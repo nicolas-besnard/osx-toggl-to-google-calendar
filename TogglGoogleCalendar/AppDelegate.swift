@@ -7,8 +7,6 @@
 //
 
 import Cocoa
-import SwiftyJSON
-import AFNetworking
 
 @NSApplicationMain
 
@@ -23,6 +21,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var statusMenu: NSMenu!
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
+        Context.shared.setup()
         statusItem.title = "Title"
         
         statusItem.image = NSImage(named: "toggl-icon")
@@ -39,23 +38,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         menu.addItem(menuItem)
         
+        println("UserToken: \(Context.shared.user.token)")
         self.window!.orderOut(self)
-        let manager = AFHTTPRequestOperationManager()
-        manager.responseSerializer = AFJSONResponseSerializer()
-        manager.requestSerializer = AFHTTPRequestSerializer()
-        manager.requestSerializer.setAuthorizationHeaderFieldWithUsername("", password: "api_token")
-        manager.requestSerializer.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        manager.GET("https://www.toggl.com/api/v8/me", parameters: nil, success: { (operation, responseObject: AnyObject!) -> Void in
-//           let json = responseObject as [String: AnyObject]
-//            println(json)
-            let json = JSON(responseObject)
-            println(json)
-            println(json["data"]["api_token"].stringValue)
-        }) { (operation, error) -> Void in
-            println("-- ERROR --")
-            println(operation)
-            println(error)
-        }
     }
     
     func applicationWillTerminate(aNotification: NSNotification) {
