@@ -11,6 +11,7 @@
 		377B4B861A97D5EF0064AABD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 377B4B851A97D5EF0064AABD /* Images.xcassets */; };
 		377B4B891A97D5EF0064AABD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 377B4B871A97D5EF0064AABD /* MainMenu.xib */; };
 		377B4B951A97D5F00064AABD /* TogglGoogleCalendarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377B4B941A97D5F00064AABD /* TogglGoogleCalendarTests.swift */; };
+		E4B00B39831D0D65EBF8AB7A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A008BA79ECF3C7EEB22D65FF /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,6 +25,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1FEE64CFD9EA69CA3A16D932 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		377B4B7E1A97D5EF0064AABD /* TogglGoogleCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TogglGoogleCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		377B4B821A97D5EF0064AABD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		377B4B831A97D5EF0064AABD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +34,9 @@
 		377B4B8E1A97D5F00064AABD /* TogglGoogleCalendarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TogglGoogleCalendarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		377B4B931A97D5F00064AABD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		377B4B941A97D5F00064AABD /* TogglGoogleCalendarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogglGoogleCalendarTests.swift; sourceTree = "<group>"; };
+		37E3A9951A98FB0A00375DB5 /* TogglGoogleCalendar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TogglGoogleCalendar-Bridging-Header.h"; sourceTree = "<group>"; };
+		A008BA79ECF3C7EEB22D65FF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8E51DFBC61DC89F122A7685 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4B00B39831D0D65EBF8AB7A /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,12 +58,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BF54687DBD269427EEBFB7F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F8E51DFBC61DC89F122A7685 /* Pods.debug.xcconfig */,
+				1FEE64CFD9EA69CA3A16D932 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		377B4B751A97D5EF0064AABD = {
 			isa = PBXGroup;
 			children = (
 				377B4B801A97D5EF0064AABD /* TogglGoogleCalendar */,
 				377B4B911A97D5F00064AABD /* TogglGoogleCalendarTests */,
 				377B4B7F1A97D5EF0064AABD /* Products */,
+				0BF54687DBD269427EEBFB7F /* Pods */,
+				71A0CE23CF5FCD6C83F539C2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +94,7 @@
 				377B4B851A97D5EF0064AABD /* Images.xcassets */,
 				377B4B871A97D5EF0064AABD /* MainMenu.xib */,
 				377B4B811A97D5EF0064AABD /* Supporting Files */,
+				37E3A9951A98FB0A00375DB5 /* TogglGoogleCalendar-Bridging-Header.h */,
 			);
 			path = TogglGoogleCalendar;
 			sourceTree = "<group>";
@@ -106,6 +124,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		71A0CE23CF5FCD6C83F539C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A008BA79ECF3C7EEB22D65FF /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -113,9 +139,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 377B4B981A97D5F00064AABD /* Build configuration list for PBXNativeTarget "TogglGoogleCalendar" */;
 			buildPhases = (
+				EDF47B97505DD98166762416 /* Check Pods Manifest.lock */,
 				377B4B7A1A97D5EF0064AABD /* Sources */,
 				377B4B7B1A97D5EF0064AABD /* Frameworks */,
 				377B4B7C1A97D5EF0064AABD /* Resources */,
+				580EBB47571D9DEC99C01947 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,6 +227,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		580EBB47571D9DEC99C01947 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDF47B97505DD98166762416 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		377B4B7A1A97D5EF0064AABD /* Sources */ = {
@@ -318,23 +379,30 @@
 		};
 		377B4B991A97D5F00064AABD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8E51DFBC61DC89F122A7685 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = TogglGoogleCalendar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TogglGoogleCalendar/TogglGoogleCalendar-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		377B4B9A1A97D5F00064AABD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FEE64CFD9EA69CA3A16D932 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = TogglGoogleCalendar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TogglGoogleCalendar/TogglGoogleCalendar-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -393,6 +461,7 @@
 				377B4B9A1A97D5F00064AABD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		377B4B9B1A97D5F00064AABD /* Build configuration list for PBXNativeTarget "TogglGoogleCalendarTests" */ = {
 			isa = XCConfigurationList;
@@ -401,6 +470,7 @@
 				377B4B9D1A97D5F00064AABD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
