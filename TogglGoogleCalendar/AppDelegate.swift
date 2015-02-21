@@ -7,7 +7,8 @@
 //
 
 import Cocoa
-
+import SwiftyJSON
+import AFNetworking
 
 @NSApplicationMain
 
@@ -43,38 +44,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         manager.responseSerializer = AFJSONResponseSerializer()
         manager.requestSerializer = AFHTTPRequestSerializer()
         manager.requestSerializer.setAuthorizationHeaderFieldWithUsername("", password: "api_token")
-
-        manager.GET("https://www.toggl.com/api/v8/me", parameters: nil, success: { (operation, responseObject) -> Void in
-            println(operation)
-            println(responseObject)
+        manager.requestSerializer.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        manager.GET("https://www.toggl.com/api/v8/me", parameters: nil, success: { (operation, responseObject: AnyObject!) -> Void in
+//           let json = responseObject as [String: AnyObject]
+//            println(json)
+            let json = JSON(responseObject)
+            println(json)
+            println(json["data"]["api_token"].stringValue)
         }) { (operation, error) -> Void in
             println("-- ERROR --")
             println(operation)
             println(error)
         }
-        
-//        [manager GET:@"http://example.com/resources.json" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//            NSLog(@"JSON: %@", responseObject);
-//        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//            NSLog(@"Error: %@", error);
-//        }];
-        
-//        AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-//        
-//        NSURLCredential *credential = [NSURLCredential credentialWithUser:@"user" password:@"passwd" persistence:NSURLCredentialPersistenceNone];
-//        
-//        NSMutableURLRequest *request = [manager.requestSerializer requestWithMethod:@"GET" URLString:@"https://httpbin.org/basic-auth/user/passwd" parameters:nil];
-//        
-//        AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
-//        [operation setCredential:credential];
-//        [operation setResponseSerializer:[AFJSONResponseSerializer alloc]];
-//        [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-//        NSLog(@"Success: %@", responseObject);
-//        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//        NSLog(@"Failure: %@", error);
-//        }];
-//        [manager.operationQueue addOperation:operation];
-
     }
     
     func applicationWillTerminate(aNotification: NSNotification) {
