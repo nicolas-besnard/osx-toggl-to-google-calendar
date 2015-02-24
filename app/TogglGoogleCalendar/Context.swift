@@ -20,8 +20,9 @@ class Context {
     // Service
     let userService = UserService()
     
-    
+    let environment = Environment(setEnv: .DEVELOPMENT)
     let user = User()
+    let googleCalendar = GoogleCalendar()
     
     
     func setup() {

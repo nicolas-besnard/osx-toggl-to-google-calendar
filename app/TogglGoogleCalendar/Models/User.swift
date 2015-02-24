@@ -17,9 +17,32 @@ class User {
             }
             return nil
         }
-        set
-        {
+        set {
             Defaults["user_apiToken"] = newValue
         }
+    }
+    
+    var auth : GTMOAuth2Authentication!
+    let calendarService = GTLServiceCalendar()
+
+    init() {}
+    
+    func isSignedIn() -> Bool {
+        return auth.canAuthorize
+    }
+    
+    func getCalendarService() -> GTLServiceCalendar {
+        let keychainItem = Context.shared.environment.keychainItem
+        let clientID = Context.shared.environment.clientID
+        let clientSecret = Context.shared.environment.clientSecret
+        
+        auth = GTMOAuth2WindowController.authForGoogleFromKeychainForName(
+            keychainItem,
+            clientID: clientID,
+            clientSecret: clientSecret
+        )
+        calendarService.authorizer = auth
+        
+        return calendarService
     }
 }

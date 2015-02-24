@@ -135,26 +135,6 @@
                             <action selector="clickOnGoogleAuth:" target="R3a-yd-9qc" id="SOW-Dc-Pbj"/>
                         </connections>
                     </button>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9GZ-Ki-6LN">
-                        <rect key="frame" x="122" y="109" width="112" height="32"/>
-                        <buttonCell key="cell" type="push" title="Check Auth" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="eJs-54-RXI">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="clickCheckAuth:" target="R3a-yd-9qc" id="QcJ-cL-DKw"/>
-                        </connections>
-                    </button>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rAM-kF-P10">
-                        <rect key="frame" x="122" y="66" width="122" height="32"/>
-                        <buttonCell key="cell" type="push" title="Get Calendar" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4UD-xg-qyC">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="clickGetCalendar:" target="R3a-yd-9qc" id="ckX-iP-pQb"/>
-                        </connections>
-                    </button>
                 </subviews>
             </view>
             <connections>
