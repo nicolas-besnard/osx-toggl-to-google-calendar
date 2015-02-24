@@ -43,6 +43,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         println("UserToken: \(Context.shared.user.token)")
         self.window!.orderOut(self)
+        
     }
     
     func applicationWillTerminate(aNotification: NSNotification) {
