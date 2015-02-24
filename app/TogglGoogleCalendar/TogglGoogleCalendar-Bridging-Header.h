@@ -1,4 +1,5 @@
 //
 //  Use this file to import your target's public headers that you would like to expose to Swift.
 //
-#import "GTMOAuth2WindowController.h"
+#import "GTLCalendar.h"
+#import "GTL/GTMOAuth2WindowController.h"

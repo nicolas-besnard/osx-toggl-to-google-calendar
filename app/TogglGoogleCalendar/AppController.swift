@@ -17,11 +17,29 @@ class AppController: NSObject {
         google()
     }
     
+    @IBAction func clickGetCalendar(sender: AnyObject) {
+        let calendarService = GTLServiceCalendar()
+        let query: GTLQueryCalendar = GTLQueryCalendar.queryForCalendarListList() as GTLQueryCalendar
+        calendarService.authorizer = auth
+        query.minAccessRole = "owner";
+        calendarService.executeQuery(
+            query,
+            completionHandler: { (ticket: GTLServiceTicket!, calendarList: AnyObject!, error: NSError!) -> Void in
+                println("Calendar")
+                println(calendarList)
+                println(error)
+        })
+    }
+    @IBAction func clickCheckAuth(sender: AnyObject) {
+        println("Auth")
+        println(auth)
+    }
+    
     func google() {
         println("google")
-        let scope = "https://www.googleapis.com/auth/plus.me"
+        let scope = "https://www.googleapis.com/auth/calendar"
         let clientID = ""
-        let clientSecret = "-"
+        let clientSecret = ""
         let keychainItem = "OAuth 2 Login"
         let controller = GTMOAuth2WindowController(
             scope: scope,
