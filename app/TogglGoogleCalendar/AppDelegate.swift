@@ -13,6 +13,8 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBOutlet weak var window: NSWindow!
+
+    
     var statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(CGFloat(-1))
     
     var menu = NSMenu()
@@ -22,6 +24,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         Context.shared.setup()
+
         statusItem.title = "Title"
         
         statusItem.image = NSImage(named: "toggl-icon")

@@ -120,13 +120,35 @@
                             <action selector="clickLogin:" target="QvC-M9-y7g" id="VAl-f3-vnk"/>
                         </connections>
                     </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HKd-mf-Neq">
+                        <rect key="frame" x="122" y="163" width="82" height="32"/>
+                        <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZsQ-dg-mb9">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="click:" target="QvC-M9-y7g" id="2u4-M7-hKY"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <connections>
                 <outlet property="emailTextField" destination="pws-p3-DOe" id="36o-S0-wxM"/>
                 <outlet property="loginButton" destination="w9B-ep-lVD" id="fkp-Sl-vs4"/>
                 <outlet property="passwordTextField" destination="Ea8-fd-mIW" id="SpZ-jp-yFD"/>
+                <outlet property="tasksWindow" destination="qEQ-2z-UGc" id="xcq-v3-YNO"/>
             </connections>
+        </window>
+        <window title="Tasks" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="qEQ-2z-UGc" customClass="TasksWindow" customModule="TogglGoogleCalendar" customModuleProvider="target">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="524" y="258" width="480" height="360"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <view key="contentView" id="6UF-We-pmz">
+                <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
+                <autoresizingMask key="autoresizingMask"/>
+            </view>
+            <point key="canvasLocation" x="325" y="743"/>
         </window>
     </objects>
 </document>

@@ -10,9 +10,13 @@
 		11971D85998B76F9F4B7527E /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14C2D4C4C3C169D40F6800B9 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		375544E01A990E9E009D63DE /* User.Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375544DF1A990E9E009D63DE /* User.Service.swift */; };
 		375544E21A990F8B009D63DE /* Base.Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375544E11A990F8B009D63DE /* Base.Service.swift */; };
+		3759AF3E1A99586A0075765D /* TasksWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3759AF3D1A99586A0075765D /* TasksWindow.swift */; };
+		3759AF401A9959570075765D /* TasksWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3759AF3F1A9959570075765D /* TasksWindowController.swift */; };
+		3759AF461A995B0C0075765D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3759AF451A995B0C0075765D /* MainMenu.xib */; };
+		3759AF491A995CA70075765D /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3759AF471A995CA70075765D /* RootViewController.swift */; };
+		3759AF4A1A995CA70075765D /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3759AF481A995CA70075765D /* RootViewController.xib */; };
 		377B4B841A97D5EF0064AABD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377B4B831A97D5EF0064AABD /* AppDelegate.swift */; };
 		377B4B861A97D5EF0064AABD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 377B4B851A97D5EF0064AABD /* Images.xcassets */; };
-		377B4B891A97D5EF0064AABD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 377B4B871A97D5EF0064AABD /* MainMenu.xib */; };
 		377B4B951A97D5F00064AABD /* TogglGoogleCalendarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377B4B941A97D5F00064AABD /* TogglGoogleCalendarTests.swift */; };
 		37E3A99A1A990C0E00375DB5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E3A9991A990C0E00375DB5 /* User.swift */; };
 		37EF9E821A991308001EC5C4 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EF9E811A991308001EC5C4 /* Context.swift */; };
@@ -34,11 +38,15 @@
 		1FEE64CFD9EA69CA3A16D932 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		375544DF1A990E9E009D63DE /* User.Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.Service.swift; sourceTree = "<group>"; };
 		375544E11A990F8B009D63DE /* Base.Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base.Service.swift; sourceTree = "<group>"; };
+		3759AF3D1A99586A0075765D /* TasksWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksWindow.swift; sourceTree = "<group>"; };
+		3759AF3F1A9959570075765D /* TasksWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksWindowController.swift; sourceTree = "<group>"; };
+		3759AF451A995B0C0075765D /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		3759AF471A995CA70075765D /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		3759AF481A995CA70075765D /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		377B4B7E1A97D5EF0064AABD /* TogglGoogleCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TogglGoogleCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		377B4B821A97D5EF0064AABD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		377B4B831A97D5EF0064AABD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		377B4B851A97D5EF0064AABD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		377B4B881A97D5EF0064AABD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		377B4B8E1A97D5F00064AABD /* TogglGoogleCalendarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TogglGoogleCalendarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		377B4B931A97D5F00064AABD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		377B4B941A97D5F00064AABD /* TogglGoogleCalendarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogglGoogleCalendarTests.swift; sourceTree = "<group>"; };
@@ -113,11 +121,15 @@
 				37E3A9981A990BEA00375DB5 /* Models */,
 				377B4B831A97D5EF0064AABD /* AppDelegate.swift */,
 				377B4B851A97D5EF0064AABD /* Images.xcassets */,
-				377B4B871A97D5EF0064AABD /* MainMenu.xib */,
+				3759AF451A995B0C0075765D /* MainMenu.xib */,
 				377B4B811A97D5EF0064AABD /* Supporting Files */,
 				37E3A9951A98FB0A00375DB5 /* TogglGoogleCalendar-Bridging-Header.h */,
 				37EF9E811A991308001EC5C4 /* Context.swift */,
 				37EF9E831A99145F001EC5C4 /* MainMenu.swift */,
+				3759AF3D1A99586A0075765D /* TasksWindow.swift */,
+				3759AF3F1A9959570075765D /* TasksWindowController.swift */,
+				3759AF471A995CA70075765D /* RootViewController.swift */,
+				3759AF481A995CA70075765D /* RootViewController.xib */,
 			);
 			path = TogglGoogleCalendar;
 			sourceTree = "<group>";
@@ -247,7 +259,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				377B4B861A97D5EF0064AABD /* Images.xcassets in Resources */,
-				377B4B891A97D5EF0064AABD /* MainMenu.xib in Resources */,
+				3759AF461A995B0C0075765D /* MainMenu.xib in Resources */,
+				3759AF4A1A995CA70075765D /* RootViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,12 +326,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3759AF401A9959570075765D /* TasksWindowController.swift in Sources */,
 				37E3A99A1A990C0E00375DB5 /* User.swift in Sources */,
+				3759AF491A995CA70075765D /* RootViewController.swift in Sources */,
 				37EF9E841A99145F001EC5C4 /* MainMenu.swift in Sources */,
 				377B4B841A97D5EF0064AABD /* AppDelegate.swift in Sources */,
 				375544E01A990E9E009D63DE /* User.Service.swift in Sources */,
 				37EF9E821A991308001EC5C4 /* Context.swift in Sources */,
 				375544E21A990F8B009D63DE /* Base.Service.swift in Sources */,
+				3759AF3E1A99586A0075765D /* TasksWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,17 +355,6 @@
 			targetProxy = 377B4B8F1A97D5F00064AABD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		377B4B871A97D5EF0064AABD /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				377B4B881A97D5EF0064AABD /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		377B4B961A97D5F00064AABD /* Debug */ = {
