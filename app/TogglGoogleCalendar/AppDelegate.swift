@@ -11,10 +11,8 @@ import Cocoa
 @NSApplicationMain
 
 class AppDelegate: NSObject, NSApplicationDelegate {
-    
-    @IBOutlet weak var window: NSWindow!
 
-    
+    @IBOutlet weak var window: MainMenu!
     var statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(CGFloat(-1))
     
     var menu = NSMenu()
@@ -40,10 +38,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         
         menu.addItem(menuItem)
-        
+
         println("UserToken: \(Context.shared.user.token)")
-        self.window!.orderOut(self)
-        
+        self.window.orderOut(self)
     }
     
     func applicationWillTerminate(aNotification: NSNotification) {

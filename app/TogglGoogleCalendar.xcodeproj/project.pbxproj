@@ -21,6 +21,8 @@
 		376384521A9CCC92003CC71C /* GTMOAuth2SignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 3763844D1A9CCC92003CC71C /* GTMOAuth2SignIn.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		376384531A9CCC92003CC71C /* GTMOAuth2Window.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3763844E1A9CCC92003CC71C /* GTMOAuth2Window.xib */; };
 		376384541A9CCC92003CC71C /* GTMOAuth2WindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 376384501A9CCC92003CC71C /* GTMOAuth2WindowController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3763845C1A9CE55A003CC71C /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3763845B1A9CE55A003CC71C /* AppController.swift */; };
+		376384601A9CE689003CC71C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3763845F1A9CE689003CC71C /* WebKit.framework */; };
 		377B4B841A97D5EF0064AABD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377B4B831A97D5EF0064AABD /* AppDelegate.swift */; };
 		377B4B861A97D5EF0064AABD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 377B4B851A97D5EF0064AABD /* Images.xcassets */; };
 		377B4B951A97D5F00064AABD /* TogglGoogleCalendarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377B4B941A97D5F00064AABD /* TogglGoogleCalendarTests.swift */; };
@@ -60,6 +62,8 @@
 		3763844E1A9CCC92003CC71C /* GTMOAuth2Window.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTMOAuth2Window.xib; sourceTree = "<group>"; };
 		3763844F1A9CCC92003CC71C /* GTMOAuth2WindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuth2WindowController.h; sourceTree = "<group>"; };
 		376384501A9CCC92003CC71C /* GTMOAuth2WindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuth2WindowController.m; sourceTree = "<group>"; };
+		3763845B1A9CE55A003CC71C /* AppController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
+		3763845F1A9CE689003CC71C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		377B4B7E1A97D5EF0064AABD /* TogglGoogleCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TogglGoogleCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		377B4B821A97D5EF0064AABD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		377B4B831A97D5EF0064AABD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				376384601A9CE689003CC71C /* WebKit.framework in Frameworks */,
 				11971D85998B76F9F4B7527E /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,6 +171,7 @@
 				3759AF3F1A9959570075765D /* TasksWindowController.swift */,
 				3759AF471A995CA70075765D /* RootViewController.swift */,
 				3759AF481A995CA70075765D /* RootViewController.xib */,
+				3763845B1A9CE55A003CC71C /* AppController.swift */,
 			);
 			path = TogglGoogleCalendar;
 			sourceTree = "<group>";
@@ -206,6 +212,7 @@
 		71A0CE23CF5FCD6C83F539C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3763845F1A9CE689003CC71C /* WebKit.framework */,
 				14C2D4C4C3C169D40F6800B9 /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -374,6 +381,7 @@
 				375544E01A990E9E009D63DE /* User.Service.swift in Sources */,
 				376384541A9CCC92003CC71C /* GTMOAuth2WindowController.m in Sources */,
 				37EF9E821A991308001EC5C4 /* Context.swift in Sources */,
+				3763845C1A9CE55A003CC71C /* AppController.swift in Sources */,
 				375544E21A990F8B009D63DE /* Base.Service.swift in Sources */,
 				3759AF3E1A99586A0075765D /* TasksWindow.swift in Sources */,
 				376384491A9CCC85003CC71C /* GTMHTTPFetchHistory.m in Sources */,
