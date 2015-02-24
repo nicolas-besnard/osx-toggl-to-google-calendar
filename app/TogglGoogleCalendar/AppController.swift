@@ -11,6 +11,22 @@ import Cocoa
 class AppController: NSObject {
     @IBOutlet weak var mainWindow: MainMenu!
     var auth : GTMOAuth2Authentication!
+    let clientID = ""
+    let clientSecret = ""
+    let keychainItem = "OAuth 2 Login"
+    
+    let calendarService = GTLServiceCalendar()
+    override func awakeFromNib() {
+        auth = GTMOAuth2WindowController.authForGoogleFromKeychainForName(keychainItem, clientID: clientID, clientSecret: clientSecret)
+        
+        calendarService.authorizer = auth
+        
+        if (auth.canAuthorize) {
+            println("IS LOGGED")
+        } else {
+            println("IS NOT LOGGED")
+        }
+    }
     
     @IBAction func clickOnGoogleAuth(sender: AnyObject) {
         println("Auth")
@@ -18,7 +34,6 @@ class AppController: NSObject {
     }
     
     @IBAction func clickGetCalendar(sender: AnyObject) {
-        let calendarService = GTLServiceCalendar()
         let query: GTLQueryCalendar = GTLQueryCalendar.queryForCalendarListList() as GTLQueryCalendar
         calendarService.authorizer = auth
         query.minAccessRole = "owner";
@@ -38,9 +53,6 @@ class AppController: NSObject {
     func google() {
         println("google")
         let scope = "https://www.googleapis.com/auth/calendar"
-        let clientID = ""
-        let clientSecret = ""
-        let keychainItem = "OAuth 2 Login"
         let controller = GTMOAuth2WindowController(
             scope: scope,
             clientID: clientID,
