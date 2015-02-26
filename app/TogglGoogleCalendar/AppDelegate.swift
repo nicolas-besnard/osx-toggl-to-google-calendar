@@ -11,11 +11,8 @@ import Cocoa
 @NSApplicationMain
 
 class AppDelegate: NSObject, NSApplicationDelegate {
-
-    @IBOutlet weak var window: NSWindow!
-    @IBOutlet weak var entryWindowController: EntryWindowController!
-
     
+    var mainWindowController: MainWindowController!
     var statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(CGFloat(-1))
     
     var menu = NSMenu()
@@ -27,7 +24,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         Context.shared.setup()
-        entryWindowController = EntryWindowController.shared
+
+        mainWindowController = MainWindowController(windowNibName: "MainWindowController")
+        mainWindowController.window?.releasedWhenClosed = false
+        
         statusItem.title = "Title"
         
         statusItem.image = NSImage(named: "toggl-icon")
@@ -58,11 +58,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     private func showWindow() {
         if (user.isSignedIn()) {
-            window.orderOut(self)
-            entryWindowController.showWindow(self)
+//            window.orderOut(self)
+//            entryWindowController.showWindow(self)
         } else {
-            entryWindowController.close()
-            window.orderFront(self)
+//            entryWindowController.close()
+//            window.orderFront(self)
         }
         NSApp.activateIgnoringOtherApps(true)
     }

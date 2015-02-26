@@ -1,5 +1,5 @@
 //
-//  EntryWindowController.swift
+//  MainWindowController.swift
 //  TogglGoogleCalendar
 //
 //  Created by Nicolas Besnard on 26/02/2015.
@@ -8,16 +8,8 @@
 
 import Cocoa
 
-class EntryWindowController: NSWindowController {
+class MainWindowController: NSWindowController {
 
-    // S I N G L E T O N
-    class var shared: EntryWindowController {
-        struct Static {
-            static let instance = EntryWindowController(windowNibName: "EntryWindowController")
-        }
-        return Static.instance
-    }
-    
     override func windowDidLoad() {
         super.windowDidLoad()
 
