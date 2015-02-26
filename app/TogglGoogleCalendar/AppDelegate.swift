@@ -13,16 +13,21 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
+    @IBOutlet weak var entryWindowController: EntryWindowController!
+
+    
     var statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(CGFloat(-1))
     
     var menu = NSMenu()
+    
+    var user = Context.shared.user
     
 
     @IBOutlet weak var statusMenu: NSMenu!
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         Context.shared.setup()
-
+        entryWindowController = EntryWindowController.shared
         statusItem.title = "Title"
         
         statusItem.image = NSImage(named: "toggl-icon")
@@ -40,7 +45,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         menu.addItem(menuItem)
 
         println("UserToken: \(Context.shared.user.token)")
-        NSApp.activateIgnoringOtherApps(true)
+        showWindow()
     }
     
     func applicationWillTerminate(aNotification: NSNotification) {
@@ -48,10 +53,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func clickConfigurationItem() {
-        NSApp.activateIgnoringOtherApps(true)
-        self.window.orderFront(self)
+        showWindow()
     }
     
+    private func showWindow() {
+        if (user.isSignedIn()) {
+            window.orderOut(self)
+            entryWindowController.showWindow(self)
+        } else {
+            entryWindowController.close()
+            window.orderFront(self)
+        }
+        NSApp.activateIgnoringOtherApps(true)
+    }
 }
-
-
