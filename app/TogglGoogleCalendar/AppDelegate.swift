@@ -41,10 +41,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         menuItem.action = Selector("clickConfigurationItem")
         menuItem.keyEquivalent = ""
         
-        
         menu.addItem(menuItem)
 
         println("UserToken: \(Context.shared.user.token)")
+        NSNotificationCenter.defaultCenter().postNotificationName("showLoginNotification", object: nil)
         showWindow()
     }
     
