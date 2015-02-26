@@ -10,35 +10,37 @@ import Cocoa
 
 class AppController: NSObject {
 
-    @IBOutlet weak var mainWindow: MainWindow!
+    // Outlet
+    @IBOutlet weak var mainWindow: NSWindow!
     @IBOutlet weak var emailTextField: NSTextField!
     @IBOutlet weak var passwordTextField: NSSecureTextField!
     @IBOutlet weak var loginButton: NSButton!
-
     
-    @IBAction func clickOnGoogleAuth(sender: AnyObject) {
-        println("Auth")
-        println(mainWindow)
-        mainWindow.google()
-//        google()
-    }
-        
-    @IBAction func clickCreateEvent(sender: AnyObject) {
-        Context.shared.googleCalendar.addEvent()
-    }
+    let user = Context.shared.user
     
+    override func awakeFromNib() {
+        println("isSignedIn")
+        println(user.isSignedIn())
+    }
 
     @IBAction func clickLoginButton(sender: AnyObject) {
-//        let email = emailTextField.stringValue
-//        let password = passwordTextField.stringValue
-//        
-//        loginButton.enabled = false
-//        
-//        
-//        Context.shared.userService.loginWithEmail(email, password: password) { () -> Void in
-//            self.loginButton.enabled = true
-//            self.mainWindow.orderOut(self)
-//        }
+        let email = emailTextField.stringValue
+        let password = passwordTextField.stringValue
+        
+        
+        if email.length == 0 || !email.isEmail() {
+            emailTextField.becomeFirstResponder()
+        }
+        else if password.length == 0{
+            passwordTextField.becomeFirstResponder()
+        } else {
+            loginButton.enabled = false
+            
+            Context.shared.userService.loginWithEmail(email, password: password) { () -> Void in
+                self.loginButton.enabled = true
+                self.mainWindow.orderOut(self)
+            }
+        }
     }
     
     func google() {

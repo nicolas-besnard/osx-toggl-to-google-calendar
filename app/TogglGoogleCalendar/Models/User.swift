@@ -28,21 +28,30 @@ class User {
     init() {}
     
     func isSignedIn() -> Bool {
+        if auth == nil {
+            getTokenFromKeychain()
+        }
+        
         return auth.canAuthorize
     }
     
     func getCalendarService() -> GTLServiceCalendar {
-        let keychainItem = Context.shared.environment.keychainItem
-        let clientID = Context.shared.environment.clientID
-        let clientSecret = Context.shared.environment.clientSecret
-        
-        auth = GTMOAuth2WindowController.authForGoogleFromKeychainForName(
-            keychainItem,
-            clientID: clientID,
-            clientSecret: clientSecret
-        )
         calendarService.authorizer = auth
         
         return calendarService
+    }
+    
+    private func getTokenFromKeychain() {
+        if auth == nil {
+            let keychainItem = Context.shared.environment.keychainItem
+            let clientID = Context.shared.environment.clientID
+            let clientSecret = Context.shared.environment.clientSecret
+        
+            auth = GTMOAuth2WindowController.authForGoogleFromKeychainForName(
+                keychainItem,
+                clientID: clientID,
+                clientSecret: clientSecret
+            )
+        }
     }
 }

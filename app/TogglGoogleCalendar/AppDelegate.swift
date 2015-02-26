@@ -12,7 +12,7 @@ import Cocoa
 
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    @IBOutlet weak var window: MainWindow!
+    @IBOutlet weak var window: NSWindow!
     var statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(CGFloat(-1))
     
     var menu = NSMenu()
@@ -41,7 +41,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         println("UserToken: \(Context.shared.user.token)")
         NSApp.activateIgnoringOtherApps(true)
-//        self.window.orderOut(self)
     }
     
     func applicationWillTerminate(aNotification: NSNotification) {

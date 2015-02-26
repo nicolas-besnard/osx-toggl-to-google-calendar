@@ -22,7 +22,7 @@
             <connections>
                 <outlet property="emailTextField" destination="pws-p3-DOe" id="QGb-YH-kRc"/>
                 <outlet property="loginButton" destination="w9B-ep-lVD" id="jzZ-04-7fW"/>
-                <outlet property="mainWindow" destination="QvC-M9-y7g" id="Ice-0f-ub2"/>
+                <outlet property="mainWindow" destination="QvC-M9-y7g" id="0Po-mJ-l26"/>
                 <outlet property="passwordTextField" destination="Ea8-fd-mIW" id="Nea-CO-e0j"/>
             </connections>
         </customObject>
@@ -74,7 +74,7 @@
                 </menuItem>
             </items>
         </menu>
-        <window identifier="MainWindow" title="TogglGoogleCalendar" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g" customClass="MainWindow" customModule="TogglGoogleCalendar" customModuleProvider="target">
+        <window identifier="MainWindow" title="TogglGoogleCalendar" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="480" height="360"/>
@@ -124,25 +124,8 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
-                    </button>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HKd-mf-Neq">
-                        <rect key="frame" x="122" y="163" width="117" height="32"/>
-                        <buttonCell key="cell" type="push" title="Google Auth" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZsQ-dg-mb9">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
                         <connections>
-                            <action selector="clickOnGoogleAuth:" target="R3a-yd-9qc" id="SOW-Dc-Pbj"/>
-                        </connections>
-                    </button>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aKg-Zd-7iS">
-                        <rect key="frame" x="122" y="122" width="120" height="32"/>
-                        <buttonCell key="cell" type="push" title="Create Event" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Mur-CK-RL1">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="clickCreateEvent:" target="R3a-yd-9qc" id="gMr-Pm-aKs"/>
+                            <action selector="clickLoginButton:" target="R3a-yd-9qc" id="dNo-5x-lMN"/>
                         </connections>
                     </button>
                 </subviews>
