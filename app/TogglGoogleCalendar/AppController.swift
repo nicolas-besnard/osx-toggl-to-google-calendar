@@ -9,27 +9,45 @@
 import Cocoa
 
 class AppController: NSObject {
-    @IBOutlet weak var mainWindow: MainMenu!
 
-    var calendarService: GTLServiceCalendar!
-    
-    override func awakeFromNib() {
-        self.calendarService = Context.shared.user.getCalendarService()
-    }
+    @IBOutlet weak var mainWindow: MainWindow!
+    @IBOutlet weak var emailTextField: NSTextField!
+    @IBOutlet weak var passwordTextField: NSSecureTextField!
+    @IBOutlet weak var loginButton: NSButton!
+
     
     @IBAction func clickOnGoogleAuth(sender: AnyObject) {
         println("Auth")
-        google()
+        println(mainWindow)
+        mainWindow.google()
+//        google()
     }
         
+    @IBAction func clickCreateEvent(sender: AnyObject) {
+        Context.shared.googleCalendar.addEvent()
+    }
+    
+
+    @IBAction func clickLoginButton(sender: AnyObject) {
+//        let email = emailTextField.stringValue
+//        let password = passwordTextField.stringValue
+//        
+//        loginButton.enabled = false
+//        
+//        
+//        Context.shared.userService.loginWithEmail(email, password: password) { () -> Void in
+//            self.loginButton.enabled = true
+//            self.mainWindow.orderOut(self)
+//        }
+    }
+    
     func google() {
         println("google")
-        let scope = "https://www.googleapis.com/auth/calendar"
         let controller = GTMOAuth2WindowController(
-            scope: scope,
-            clientID: Context.shared.environment.clientID,
-            clientSecret: Context.shared.environment.clientSecret,
-            keychainItemName: Context.shared.environment.keychainItem,
+            scope: "https://www.googleapis.com/auth/calendar",
+            clientID: "aze",
+            clientSecret: "aze",
+            keychainItemName: "aze",
             resourceBundle: nil
         )
         

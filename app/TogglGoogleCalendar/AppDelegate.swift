@@ -12,12 +12,12 @@ import Cocoa
 
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    @IBOutlet weak var window: MainMenu!
+    @IBOutlet weak var window: MainWindow!
     var statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(CGFloat(-1))
     
     var menu = NSMenu()
     
-    
+
     @IBOutlet weak var statusMenu: NSMenu!
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {

@@ -10,11 +10,7 @@
 		11971D85998B76F9F4B7527E /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14C2D4C4C3C169D40F6800B9 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		375544E01A990E9E009D63DE /* User.Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375544DF1A990E9E009D63DE /* User.Service.swift */; };
 		375544E21A990F8B009D63DE /* Base.Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375544E11A990F8B009D63DE /* Base.Service.swift */; };
-		3759AF3E1A99586A0075765D /* TasksWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3759AF3D1A99586A0075765D /* TasksWindow.swift */; };
-		3759AF401A9959570075765D /* TasksWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3759AF3F1A9959570075765D /* TasksWindowController.swift */; };
 		3759AF461A995B0C0075765D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3759AF451A995B0C0075765D /* MainMenu.xib */; };
-		3759AF491A995CA70075765D /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3759AF471A995CA70075765D /* RootViewController.swift */; };
-		3759AF4A1A995CA70075765D /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3759AF481A995CA70075765D /* RootViewController.xib */; };
 		3763845C1A9CE55A003CC71C /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3763845B1A9CE55A003CC71C /* AppController.swift */; };
 		376384601A9CE689003CC71C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3763845F1A9CE689003CC71C /* WebKit.framework */; };
 		377B4B841A97D5EF0064AABD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377B4B831A97D5EF0064AABD /* AppDelegate.swift */; };
@@ -23,12 +19,11 @@
 		37A34BCA1A9D16A80032AA83 /* GoogleCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A34BC91A9D16A80032AA83 /* GoogleCalendar.swift */; };
 		37A34BCF1A9D1F170032AA83 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A34BCE1A9D1F170032AA83 /* Array.swift */; };
 		37A34BD21A9D38E50032AA83 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A34BD11A9D38E50032AA83 /* Environment.swift */; };
-		37E02B311A9CFC1C005E1044 /* GTL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37E02B201A9CFB6F005E1044 /* GTL.framework */; };
-		37E02B321A9CFC1C005E1044 /* GTL.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37E02B201A9CFB6F005E1044 /* GTL.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		37B5F06D1A9EA30E00D9AB03 /* GTL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B5F06C1A9EA30E00D9AB03 /* GTL.framework */; };
 		37E02B711A9CFCF6005E1044 /* GTLCalendar_Sources.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E02B3B1A9CFCF6005E1044 /* GTLCalendar_Sources.m */; };
 		37E3A99A1A990C0E00375DB5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E3A9991A990C0E00375DB5 /* User.swift */; };
+		37E53FF61A9E156700D50AD2 /* MainWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E53FF51A9E156700D50AD2 /* MainWindow.swift */; };
 		37EF9E821A991308001EC5C4 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EF9E811A991308001EC5C4 /* Context.swift */; };
-		37EF9E841A99145F001EC5C4 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EF9E831A99145F001EC5C4 /* MainMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,41 +34,6 @@
 			remoteGlobalIDString = 377B4B7D1A97D5EF0064AABD;
 			remoteInfo = TogglGoogleCalendar;
 		};
-		37E02B1F1A9CFB6F005E1044 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 37E02B181A9CFB6F005E1044 /* GTL.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4F38F6A60B66E91D00B24B81;
-			remoteInfo = GTLFramework;
-		};
-		37E02B211A9CFB6F005E1044 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 37E02B181A9CFB6F005E1044 /* GTL.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4F12027C11A4CA2F00BEB470;
-			remoteInfo = GTLTouchStaticLib;
-		};
-		37E02B231A9CFB6F005E1044 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 37E02B181A9CFB6F005E1044 /* GTL.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4F12027D11A4CA2F00BEB470;
-			remoteInfo = GTLUnitTests;
-		};
-		37E02B251A9CFB6F005E1044 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 37E02B181A9CFB6F005E1044 /* GTL.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4F1AD9020B71603F00DC0485;
-			remoteInfo = DevelopmentTestTool;
-		};
-		37E02B331A9CFC1C005E1044 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 37E02B181A9CFB6F005E1044 /* GTL.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 4F38F6A50B66E91D00B24B81;
-			remoteInfo = GTLFramework;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -83,7 +43,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				37E02B321A9CFC1C005E1044 /* GTL.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,11 +54,7 @@
 		1FEE64CFD9EA69CA3A16D932 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		375544DF1A990E9E009D63DE /* User.Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.Service.swift; sourceTree = "<group>"; };
 		375544E11A990F8B009D63DE /* Base.Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base.Service.swift; sourceTree = "<group>"; };
-		3759AF3D1A99586A0075765D /* TasksWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksWindow.swift; sourceTree = "<group>"; };
-		3759AF3F1A9959570075765D /* TasksWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksWindowController.swift; sourceTree = "<group>"; };
 		3759AF451A995B0C0075765D /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
-		3759AF471A995CA70075765D /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		3759AF481A995CA70075765D /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		3763845B1A9CE55A003CC71C /* AppController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
 		3763845F1A9CE689003CC71C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		377B4B7E1A97D5EF0064AABD /* TogglGoogleCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TogglGoogleCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,13 +67,15 @@
 		37A34BC91A9D16A80032AA83 /* GoogleCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleCalendar.swift; sourceTree = "<group>"; };
 		37A34BCE1A9D1F170032AA83 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		37A34BD11A9D38E50032AA83 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
-		37E02B181A9CFB6F005E1044 /* GTL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GTL.xcodeproj; path = "../../../../google-api-objectivec-client-read-only/Source/GTL.xcodeproj"; sourceTree = "<group>"; };
+		37A34BD31A9D422C0032AA83 /* Sandbox.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Sandbox.playground; sourceTree = "<group>"; };
+		37B5F0581A9EA24200D9AB03 /* GTL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GTL.xcodeproj; path = ../Source/GTL.xcodeproj; sourceTree = "<group>"; };
+		37B5F06C1A9EA30E00D9AB03 /* GTL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GTL.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/TogglGoogleCalendar-grqzfjjijjhcejfyrkmosaqopgza/Build/Products/Debug/GTL.framework"; sourceTree = "<group>"; };
 		37E02B3B1A9CFCF6005E1044 /* GTLCalendar_Sources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLCalendar_Sources.m; sourceTree = "<group>"; };
 		37E02B3C1A9CFCF6005E1044 /* GTLCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLCalendar.h; sourceTree = "<group>"; };
 		37E3A9951A98FB0A00375DB5 /* TogglGoogleCalendar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TogglGoogleCalendar-Bridging-Header.h"; sourceTree = "<group>"; };
 		37E3A9991A990C0E00375DB5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		37E53FF51A9E156700D50AD2 /* MainWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindow.swift; sourceTree = "<group>"; };
 		37EF9E811A991308001EC5C4 /* Context.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
-		37EF9E831A99145F001EC5C4 /* MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		F8E51DFBC61DC89F122A7685 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,8 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37B5F06D1A9EA30E00D9AB03 /* GTL.framework in Frameworks */,
 				376384601A9CE689003CC71C /* WebKit.framework in Frameworks */,
-				37E02B311A9CFC1C005E1044 /* GTL.framework in Frameworks */,
 				11971D85998B76F9F4B7527E /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,7 +128,7 @@
 		377B4B751A97D5EF0064AABD = {
 			isa = PBXGroup;
 			children = (
-				37E02B181A9CFB6F005E1044 /* GTL.xcodeproj */,
+				37B5F0581A9EA24200D9AB03 /* GTL.xcodeproj */,
 				377B4B801A97D5EF0064AABD /* TogglGoogleCalendar */,
 				377B4B911A97D5F00064AABD /* TogglGoogleCalendarTests */,
 				377B4B7F1A97D5EF0064AABD /* Products */,
@@ -200,14 +157,11 @@
 				377B4B831A97D5EF0064AABD /* AppDelegate.swift */,
 				377B4B851A97D5EF0064AABD /* Images.xcassets */,
 				3759AF451A995B0C0075765D /* MainMenu.xib */,
+				37E53FF51A9E156700D50AD2 /* MainWindow.swift */,
+				37A34BD31A9D422C0032AA83 /* Sandbox.playground */,
 				377B4B811A97D5EF0064AABD /* Supporting Files */,
 				37E3A9951A98FB0A00375DB5 /* TogglGoogleCalendar-Bridging-Header.h */,
 				37EF9E811A991308001EC5C4 /* Context.swift */,
-				37EF9E831A99145F001EC5C4 /* MainMenu.swift */,
-				3759AF3D1A99586A0075765D /* TasksWindow.swift */,
-				3759AF3F1A9959570075765D /* TasksWindowController.swift */,
-				3759AF471A995CA70075765D /* RootViewController.swift */,
-				3759AF481A995CA70075765D /* RootViewController.xib */,
 				3763845B1A9CE55A003CC71C /* AppController.swift */,
 				37A34BCE1A9D1F170032AA83 /* Array.swift */,
 			);
@@ -247,17 +201,6 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		37E02B191A9CFB6F005E1044 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				37E02B201A9CFB6F005E1044 /* GTL.framework */,
-				37E02B221A9CFB6F005E1044 /* libGTLTouchStaticLib.a */,
-				37E02B241A9CFB6F005E1044 /* GTLUnitTests.xctest */,
-				37E02B261A9CFB6F005E1044 /* DevelopmentTestTool */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		37E02B3A1A9CFCE5005E1044 /* GoogleCalendarService */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +222,7 @@
 		71A0CE23CF5FCD6C83F539C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				37B5F06C1A9EA30E00D9AB03 /* GTL.framework */,
 				3763845F1A9CE689003CC71C /* WebKit.framework */,
 				14C2D4C4C3C169D40F6800B9 /* Pods.framework */,
 			);
@@ -303,7 +247,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				37E02B341A9CFC1C005E1044 /* PBXTargetDependency */,
 			);
 			name = TogglGoogleCalendar;
 			productName = TogglGoogleCalendar;
@@ -357,12 +300,6 @@
 			mainGroup = 377B4B751A97D5EF0064AABD;
 			productRefGroup = 377B4B7F1A97D5EF0064AABD /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 37E02B191A9CFB6F005E1044 /* Products */;
-					ProjectRef = 37E02B181A9CFB6F005E1044 /* GTL.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				377B4B7D1A97D5EF0064AABD /* TogglGoogleCalendar */,
@@ -371,37 +308,6 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		37E02B201A9CFB6F005E1044 /* GTL.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = GTL.framework;
-			remoteRef = 37E02B1F1A9CFB6F005E1044 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		37E02B221A9CFB6F005E1044 /* libGTLTouchStaticLib.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libGTLTouchStaticLib.a;
-			remoteRef = 37E02B211A9CFB6F005E1044 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		37E02B241A9CFB6F005E1044 /* GTLUnitTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = GTLUnitTests.xctest;
-			remoteRef = 37E02B231A9CFB6F005E1044 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		37E02B261A9CFB6F005E1044 /* DevelopmentTestTool */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = DevelopmentTestTool;
-			remoteRef = 37E02B251A9CFB6F005E1044 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
 		377B4B7C1A97D5EF0064AABD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
@@ -409,7 +315,6 @@
 			files = (
 				377B4B861A97D5EF0064AABD /* Images.xcassets in Resources */,
 				3759AF461A995B0C0075765D /* MainMenu.xib in Resources */,
-				3759AF4A1A995CA70075765D /* RootViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,20 +380,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3759AF401A9959570075765D /* TasksWindowController.swift in Sources */,
 				37E3A99A1A990C0E00375DB5 /* User.swift in Sources */,
-				3759AF491A995CA70075765D /* RootViewController.swift in Sources */,
 				37A34BD21A9D38E50032AA83 /* Environment.swift in Sources */,
 				37E02B711A9CFCF6005E1044 /* GTLCalendar_Sources.m in Sources */,
-				37EF9E841A99145F001EC5C4 /* MainMenu.swift in Sources */,
 				377B4B841A97D5EF0064AABD /* AppDelegate.swift in Sources */,
 				375544E01A990E9E009D63DE /* User.Service.swift in Sources */,
 				37EF9E821A991308001EC5C4 /* Context.swift in Sources */,
 				3763845C1A9CE55A003CC71C /* AppController.swift in Sources */,
 				37A34BCF1A9D1F170032AA83 /* Array.swift in Sources */,
 				375544E21A990F8B009D63DE /* Base.Service.swift in Sources */,
+				37E53FF61A9E156700D50AD2 /* MainWindow.swift in Sources */,
 				37A34BCA1A9D16A80032AA83 /* GoogleCalendar.swift in Sources */,
-				3759AF3E1A99586A0075765D /* TasksWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,11 +409,6 @@
 			isa = PBXTargetDependency;
 			target = 377B4B7D1A97D5EF0064AABD /* TogglGoogleCalendar */;
 			targetProxy = 377B4B8F1A97D5F00064AABD /* PBXContainerItemProxy */;
-		};
-		37E02B341A9CFC1C005E1044 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GTLFramework;
-			targetProxy = 37E02B331A9CFC1C005E1044 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -600,6 +497,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/TogglGoogleCalendar-grqzfjjijjhcejfyrkmosaqopgza/Build/Products/Debug",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
@@ -626,6 +527,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/TogglGoogleCalendar-grqzfjjijjhcejfyrkmosaqopgza/Build/Products/Debug",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",

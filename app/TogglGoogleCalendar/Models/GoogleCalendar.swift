@@ -47,10 +47,20 @@ class GoogleCalendar {
         event.end = GTLCalendarEventDateTime()
         event.end.dateTime = endDateTime
         
+        let service: GTLServiceCalendar = Context.shared.user.calendarService
+        let calendar = withName("Entrepreneur")!
         
+        let calendarID = calendar.identifier
         
-//        GTLDateTime *startDateTime = [GTLDateTime dateTimeWithDate:[NSDate date]
-//            timeZone:[NSTimeZone systemTimeZone]];
+        let query = GTLQueryCalendar.queryForEventsInsertWithObject(event, calendarId: calendarID) as GTLQueryCalendar
+
+        service.executeQuery(query, completionHandler: { (ticket: GTLServiceTicket!, object: AnyObject!, error: NSError!) -> Void in
+            if error == nil {
+                println("Event: OK")
+            } else {
+                println("Event: FAIL")
+            }
+        })
     }
     
     func getRemoteCalendars() {
@@ -61,7 +71,7 @@ class GoogleCalendar {
             completionHandler: { (ticket: GTLServiceTicket!, calendarList: AnyObject!, error: NSError!) -> Void in
                 if error == nil {
                     println("Successfully get calendar")
-                    Context.shared.googleCalendar.setCalendars(calendarList as GTLCalendarCalendarList)
+                    self.setCalendars(calendarList as GTLCalendarCalendarList)
                 } else {
                     println(error)
                 }

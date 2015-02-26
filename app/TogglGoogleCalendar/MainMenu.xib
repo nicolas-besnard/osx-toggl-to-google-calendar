@@ -14,13 +14,16 @@
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="TogglGoogleCalendar" customModuleProvider="target">
             <connections>
                 <outlet property="statusMenu" destination="AYu-sK-qS6" id="k3R-kl-X32"/>
-                <outlet property="window" destination="QvC-M9-y7g" id="jgP-xD-6lP"/>
+                <outlet property="window" destination="QvC-M9-y7g" id="TxF-Hh-ff0"/>
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <customObject id="R3a-yd-9qc" userLabel="AppController" customClass="AppController" customModule="TogglGoogleCalendar" customModuleProvider="target">
             <connections>
-                <outlet property="mainWindow" destination="QvC-M9-y7g" id="sKb-2d-Rfu"/>
+                <outlet property="emailTextField" destination="pws-p3-DOe" id="QGb-YH-kRc"/>
+                <outlet property="loginButton" destination="w9B-ep-lVD" id="jzZ-04-7fW"/>
+                <outlet property="mainWindow" destination="QvC-M9-y7g" id="Ice-0f-ub2"/>
+                <outlet property="passwordTextField" destination="Ea8-fd-mIW" id="Nea-CO-e0j"/>
             </connections>
         </customObject>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
@@ -71,7 +74,7 @@
                 </menuItem>
             </items>
         </menu>
-        <window identifier="MainWindow" title="TogglGoogleCalendar" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g" customClass="MainMenu" customModule="TogglGoogleCalendar">
+        <window identifier="MainWindow" title="TogglGoogleCalendar" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g" customClass="MainWindow" customModule="TogglGoogleCalendar" customModuleProvider="target">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="480" height="360"/>
@@ -121,9 +124,6 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
-                        <connections>
-                            <action selector="clickLogin:" target="QvC-M9-y7g" id="VAl-f3-vnk"/>
-                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HKd-mf-Neq">
                         <rect key="frame" x="122" y="163" width="117" height="32"/>
@@ -135,14 +135,19 @@
                             <action selector="clickOnGoogleAuth:" target="R3a-yd-9qc" id="SOW-Dc-Pbj"/>
                         </connections>
                     </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aKg-Zd-7iS">
+                        <rect key="frame" x="122" y="122" width="120" height="32"/>
+                        <buttonCell key="cell" type="push" title="Create Event" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Mur-CK-RL1">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickCreateEvent:" target="R3a-yd-9qc" id="gMr-Pm-aKs"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
-            <connections>
-                <outlet property="emailTextField" destination="pws-p3-DOe" id="36o-S0-wxM"/>
-                <outlet property="loginButton" destination="w9B-ep-lVD" id="fkp-Sl-vs4"/>
-                <outlet property="passwordTextField" destination="Ea8-fd-mIW" id="SpZ-jp-yFD"/>
-            </connections>
-            <point key="canvasLocation" x="278" y="346"/>
+            <point key="canvasLocation" x="327" y="364"/>
         </window>
     </objects>
 </document>
