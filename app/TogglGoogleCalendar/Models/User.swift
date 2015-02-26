@@ -28,6 +28,10 @@ class User {
     init() {}
     
     func isSignedIn() -> Bool {
+        return token != nil
+    }
+    
+    func isSignedInWithGoogle() -> Bool {
         if auth == nil {
             getTokenFromKeychain()
         }
