@@ -1,5 +1,7 @@
 platform :osx, '10.10'
 
+use_frameworks!(true)
+
 pod "AFNetworking"
 pod 'SwiftyJSON', '2.1.3'
 pod 'SwiftyUserDefaults'
