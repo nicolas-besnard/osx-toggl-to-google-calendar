@@ -113,8 +113,8 @@
 		37B5F0581A9EA24200D9AB03 /* GTL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GTL.xcodeproj; path = ../Source/GTL.xcodeproj; sourceTree = "<group>"; };
 		37B5F06C1A9EA30E00D9AB03 /* GTL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GTL.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/TogglGoogleCalendar-grqzfjjijjhcejfyrkmosaqopgza/Build/Products/Debug/GTL.framework"; sourceTree = "<group>"; };
 		37B5F06F1A9EA63900D9AB03 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = String.swift; path = ../String.swift; sourceTree = "<group>"; };
-		37E02B3B1A9CFCF6005E1044 /* GTLCalendar_Sources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLCalendar_Sources.m; sourceTree = "<group>"; };
-		37E02B3C1A9CFCF6005E1044 /* GTLCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLCalendar.h; sourceTree = "<group>"; };
+		37E02B3B1A9CFCF6005E1044 /* GTLCalendar_Sources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLCalendar_Sources.m; path = Calendar/GTLCalendar_Sources.m; sourceTree = "<group>"; };
+		37E02B3C1A9CFCF6005E1044 /* GTLCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTLCalendar.h; path = Calendar/GTLCalendar.h; sourceTree = "<group>"; };
 		37E3A9951A98FB0A00375DB5 /* TogglGoogleCalendar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TogglGoogleCalendar-Bridging-Header.h"; sourceTree = "<group>"; };
 		37E3A9991A990C0E00375DB5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		37EF9E811A991308001EC5C4 /* Context.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Context.swift; path = ../Context.swift; sourceTree = "<group>"; };
