@@ -27,16 +27,15 @@ extension String {
     }
 }
 
-var time = "2015-02-27T18:59:23+00:00"
+var time = "2015-02-27T20:19:37+00:00"
 
 
 //var time = "2013-03-05T07:58:58.000Z"
 
 var date = NSDateFormatter()
-date.timeZone = NSTimeZone(abbreviation: "UTC")
 //date.dateFormat = "yyyy-MM-dd'T'hh:mm:ss.SSS'Z'"
 time
-date.dateFormat = "yyyy-MM-dd'T'HH:mm:ss' 'ZZZZ"
+date.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZ"
 date.dateFromString(time)
 date.description
 

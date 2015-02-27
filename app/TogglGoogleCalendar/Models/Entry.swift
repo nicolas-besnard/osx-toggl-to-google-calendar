@@ -12,8 +12,9 @@ import SwiftyJSON
 class Entry {
     var description: String!
     var duration: Int!
-    var start: String!
-    var stop: String!
+    var start: NSDate!
+    var stop: NSDate!
+    var at: NSDate!
     var id: Int!
     var isRunning: Bool
 
@@ -23,22 +24,27 @@ class Entry {
         let duration = json["duration"].intValue
         let start = json["start"].stringValue
         let stop = json["stop"].stringValue
+        let at = json["at"].stringValue
         
         self.id = id
         self.description = description
         self.duration = duration
-        self.start = start
-        self.stop = stop
         self.isRunning = duration < 0
+        self.start = getFormattedDate(start)
+        self.stop = getFormattedDate(stop)
+        self.at = getFormattedDate(at)
     }
     
-    func getStart() -> NSDate {
+    private func getFormattedDate(stringDate: String!) -> NSDate! {
+        if stringDate == nil || stringDate.length == 0 {
+            return nil
+        }
+        
         var dateFormatter = NSDateFormatter()
         dateFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
         dateFormatter.timeZone = NSTimeZone.localTimeZone()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZ"
-        
-        
-        return dateFormatter.dateFromString(start)!
+
+        return dateFormatter.dateFromString(stringDate)!
     }
 }

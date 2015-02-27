@@ -27,11 +27,9 @@ class Entries {
     func getFromJSON(json: JSON) {
         for (index, entry) in json {
             var newEntry = Entry(json: entry)
-            println("START")
-            println(newEntry.getStart())
             add(newEntry)
         }
-        data.sort { $0.getStart().timeIntervalSinceNow > $1.getStart().timeIntervalSinceNow }
+        data.sort { $0.at.timeIntervalSinceNow > $1.at.timeIntervalSinceNow }
         NSNotificationCenter.defaultCenter().postNotificationName("entriesUpdatedNotification", object: nil)
     }
     
