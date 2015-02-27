@@ -19,7 +19,7 @@ class TimeEntryViewController: NSViewController, NSTableViewDelegate, NSTableVie
         super.viewDidLoad()
         
         timeEntryTableView.registerNib(timeEntryCellViewNib, forIdentifier: "TimeEntryCellView")
-        // Do view setup here.
+        Context.shared.userService.getTimEntry()
     }
     
     override func loadView() {

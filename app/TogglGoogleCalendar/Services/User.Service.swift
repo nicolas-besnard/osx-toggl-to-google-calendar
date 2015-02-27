@@ -12,14 +12,39 @@ import SwiftyJSON
 typealias ServiceResponse = (() -> Void)!
 
 class UserService: BaseService {
-    func loginWithAPIToken(apiToken: String, onComplete: ServiceResponse) {
-        setAPIToken(apiToken)
+    var user: User!
+    
+    init (user: User) {
+        self.user = user
+    }
+    
+    func loginWithAPIToken(onComplete: ServiceResponse) {
+        setAPIToken(user.token)
         login(onComplete)
     }
     
     func loginWithEmail(email: String, password: String, onComplete: ServiceResponse) {
         setUserAuthorization(email, password: password)
         login(onComplete)
+    }
+    
+    func getTimEntry() {
+        setAPIToken(user.token)
+        
+        manager.GET(
+            "https://www.toggl.com/api/v8/time_entries",
+            parameters: nil,
+            success: { (operation, response) -> Void in
+                
+                let json = JSON(response)
+                
+                println(response)
+                
+        }) { (operation, error) -> Void in
+            println("-- ERROR --")
+            println(operation)
+            println(error)
+        }
     }
     
     private func login(onComplete: ServiceResponse) {
