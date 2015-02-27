@@ -8,13 +8,38 @@
 
 import Cocoa
 
-class EntryListViewController: NSViewController {
+class EntryListViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
 
     @IBOutlet var contentView: NSView!
+    @IBOutlet weak var timeEntryTableView: TimeEntryTableView!
+    
+    var timeEntryCellViewNib: NSNib!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        timeEntryTableView.registerNib(timeEntryCellViewNib, forIdentifier: "TimeEntryCellView")
         // Do view setup here.
+    }
+    
+    override func loadView() {
+        super.loadView()
+        timeEntryCellViewNib = NSNib(nibNamed: "TimeEntryCellView", bundle: nil)
+    }
+    
+    func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        var cell: TimeEntryCellView!
+        cell = tableView.makeViewWithIdentifier("TimeEntryCellView", owner: self) as TimeEntryCellView
+        return cell
+    }
+    
+    func tableView(tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
+        return 100
+    }
+
+    
+    func numberOfRowsInTableView(tableView: NSTableView) -> Int {
+        return 5
     }
     
 }
