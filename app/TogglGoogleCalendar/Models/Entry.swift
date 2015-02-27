@@ -15,6 +15,7 @@ class Entry {
     var start: String!
     var stop: String!
     var id: Int!
+    var isRunning: Bool
 
     init(json: JSON) {
         let id = json["id"].intValue
@@ -28,5 +29,16 @@ class Entry {
         self.duration = duration
         self.start = start
         self.stop = stop
+        self.isRunning = duration < 0
+    }
+    
+    func getStart() -> NSDate {
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
+        dateFormatter.timeZone = NSTimeZone.localTimeZone()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZ"
+        
+        
+        return dateFormatter.dateFromString(start)!
     }
 }

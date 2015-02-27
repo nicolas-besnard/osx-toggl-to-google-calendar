@@ -68,6 +68,10 @@ class User {
         return token != nil
     }
     
+    func getNSTimezone() -> NSTimeZone {
+        return NSTimeZone(name: timezone)!
+    }
+    
     func isSignedInWithGoogle() -> Bool {
         getTokenFromKeychain()
         return auth.canAuthorize

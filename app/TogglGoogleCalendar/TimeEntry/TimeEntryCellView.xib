@@ -42,6 +42,7 @@
                 </box>
             </subviews>
             <connections>
+                <outlet property="button" destination="6wR-jh-MCj" id="H5i-Rl-tOe"/>
                 <outlet property="descriptionTextField" destination="N40-vd-tKh" id="elK-c3-jgu"/>
             </connections>
             <point key="canvasLocation" x="349.5" y="310.5"/>

@@ -10,12 +10,27 @@ import Cocoa
 
 class TimeEntryCellView: NSTableCellView {
     @IBOutlet weak var descriptionTextField: NSTextField!
+    @IBOutlet weak var button: NSButton!
     
-    func setFromEntry(entry: Entry) {
-        descriptionTextField.stringValue = entry.description
-    }
+    var entry: Entry!
     
     @IBAction func clickTimeEntryButton(sender: AnyObject) {
-        println("click")
+        toggleButtonImage()
+    }
+    
+    func setFromEntry(entry: Entry) {
+        self.entry = entry
+        descriptionTextField.stringValue = entry.description
+        
+        toggleButtonImage()
+    }
+    
+    func toggleButtonImage() {
+        if (entry.isRunning) {
+            button.image = NSImage(named: "stop-empty")
+        } else {
+            button.image = NSImage(named: "go-empty")
+        }
+        entry.isRunning = !entry.isRunning
     }
 }

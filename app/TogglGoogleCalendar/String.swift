@@ -15,6 +15,13 @@ extension String {
             return countElements(self)
         }
     }
+    public func removeCharsFromEnd(count:Int) -> String{
+        let stringLength = countElements(self)
+        
+        let substringIndex = (stringLength < count) ? 0 : stringLength - count
+        
+        return self.substringToIndex(advance(self.startIndex, substringIndex))
+    }
     
     public func isEmpty() -> Bool {
         return self.length == 0
