@@ -15,10 +15,10 @@ class Environment
         case PRODUCTION, DEVELOPMENT
     }
     
-    var value : Type = .DEVELOPMENT
+    var value: Type = .DEVELOPMENT
     let clientID = ""
     let clientSecret = ""
-    let keychainItem = "OAuth 2 Login"
+    let keychainItem = "Toggl to Google Calendar"
     
     init(setEnv env: Type)
     {

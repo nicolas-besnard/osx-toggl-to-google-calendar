@@ -11,6 +11,7 @@ import Cocoa
 class MainWindowController: NSWindowController {
     
     var loginViewController: LoginViewController!
+    var entryListViewController: EntryListViewController!
     
     @IBOutlet weak var contentView: NSView!
     
@@ -24,17 +25,33 @@ class MainWindowController: NSWindowController {
                 selector: "showLogin:",
                 name: "showLoginNotification",
                 object: nil)
+            
+            entryListViewController = EntryListViewController(nibName: "EntryListViewController", bundle: nil)
+            entryListViewController.view.autoresizingMask = NSAutoresizingMaskOptions.ViewWidthSizable | NSAutoresizingMaskOptions.ViewHeightSizable
+            
+            NSNotificationCenter.defaultCenter().addObserver(
+                self,
+                selector: "showEntryList:",
+                name: "showEntryListNotification",
+                object: nil)
         }
     }
     
     override func windowDidLoad() {
         super.windowDidLoad()
-//        showLogin()
-        println("did load")
     }
     
     func showLogin(notification: NSNotification) {
         contentView.addSubview(loginViewController.view)
         loginViewController.view.frame = contentView.bounds
+        
+        entryListViewController.view.removeFromSuperview()
+    }
+    
+    func showEntryList(notification: NSNotification) {
+        contentView.addSubview(entryListViewController.view)
+        entryListViewController.view.frame = contentView.bounds
+        
+        loginViewController.view.removeFromSuperview()
     }
 }

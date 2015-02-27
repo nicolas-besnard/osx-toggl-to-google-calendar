@@ -42,9 +42,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         menuItem.keyEquivalent = ""
         
         menu.addItem(menuItem)
+        
+        var menuItemQuit = NSMenuItem()
+        menuItemQuit.title = "Quit"
+        menuItemQuit.action = "onQuitMenuItem"
+        
+        menu.addItem(menuItemQuit)
 
         println("UserToken: \(Context.shared.user.token)")
-        NSNotificationCenter.defaultCenter().postNotificationName("showLoginNotification", object: nil)
+        
         showWindow()
     }
     
@@ -56,13 +62,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         showWindow()
     }
     
+    func onQuitMenuItem() {
+        NSApplication.sharedApplication().terminate(self)
+    }
+    
     private func showWindow() {
-        if (user.isSignedIn()) {
-//            window.orderOut(self)
-//            entryWindowController.showWindow(self)
+        mainWindowController.showWindow(self)
+        if (Context.shared.user.isSignedIn()) {
+            NSNotificationCenter.defaultCenter().postNotificationName("showEntryListNotification", object: nil)
         } else {
-//            entryWindowController.close()
-//            window.orderFront(self)
+            NSNotificationCenter.defaultCenter().postNotificationName("showLoginNotification", object: nil)
         }
         NSApp.activateIgnoringOtherApps(true)
     }

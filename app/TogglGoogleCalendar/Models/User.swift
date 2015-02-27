@@ -7,10 +7,11 @@
 //
 
 import Foundation
+import SwiftyJSON
 import SwiftyUserDefaults
 
 class User {
-    var token : String! {
+    var token: String! {
         get {
             if let token = Defaults["user_apiToken"].string {
                 return token
@@ -22,8 +23,44 @@ class User {
         }
     }
     
-    var auth : GTMOAuth2Authentication!
+    var auth: GTMOAuth2Authentication!
     let calendarService = GTLServiceCalendar()
+    
+    var id: Int! {
+        get {
+            if let id = Defaults["user_id"].int {
+                return id
+            }
+            return nil
+        }
+        set {
+            Defaults["user_id"] = newValue
+        }
+    }
+    
+    var email: String! {
+        get {
+            if let email = Defaults["user_email"].string {
+                return email
+            }
+            return nil
+        }
+        set {
+            Defaults["user_email"] = newValue
+        }
+    }
+    
+    var timezone: String! {
+        get {
+            if let timezone = Defaults["user_timezone"].string {
+                return timezone
+            }
+            return nil
+        }
+        set {
+            Defaults["user_timezone"] = newValue
+        }
+    }
 
     init() {}
     
@@ -32,10 +69,7 @@ class User {
     }
     
     func isSignedInWithGoogle() -> Bool {
-        if auth == nil {
-            getTokenFromKeychain()
-        }
-        
+        getTokenFromKeychain()
         return auth.canAuthorize
     }
     
@@ -43,6 +77,19 @@ class User {
         calendarService.authorizer = auth
         
         return calendarService
+    }
+    
+    func setDataFromLogin(json: JSON) {
+        let jsonData = json["data"]
+        let token = jsonData["api_token"].stringValue
+        let id = jsonData["id"].intValue
+        let email = jsonData["email"].stringValue
+        let timezone = jsonData["timezone"].stringValue
+    
+        self.token = token
+        self.id = id
+        self.email = email
+        self.timezone = timezone
     }
     
     private func getTokenFromKeychain() {
