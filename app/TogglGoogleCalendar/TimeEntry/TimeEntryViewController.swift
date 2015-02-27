@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class EntryListViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
+class TimeEntryViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
 
     @IBOutlet var contentView: NSView!
     @IBOutlet weak var timeEntryTableView: TimeEntryTableView!
