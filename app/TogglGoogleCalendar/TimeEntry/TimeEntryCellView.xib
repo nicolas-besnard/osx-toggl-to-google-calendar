@@ -17,6 +17,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="400" height="100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6wR-jh-MCj">
+                                <rect key="frame" x="321" y="26" width="63" height="49"/>
+                                <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="stop-empty" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="axF-BU-5M9">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="clickTimeEntryButton:" target="c22-O7-iKe" id="YEn-Ei-q1L"/>
+                                </connections>
+                            </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N40-vd-tKh">
                                 <rect key="frame" x="14" y="42" width="304" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="eJo-W1-RQz">
@@ -34,7 +44,10 @@
             <connections>
                 <outlet property="descriptionTextField" destination="N40-vd-tKh" id="elK-c3-jgu"/>
             </connections>
-            <point key="canvasLocation" x="251" y="224"/>
+            <point key="canvasLocation" x="349.5" y="310.5"/>
         </customView>
     </objects>
+    <resources>
+        <image name="stop-empty" width="374" height="374"/>
+    </resources>
 </document>

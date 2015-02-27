@@ -14,4 +14,8 @@ class TimeEntryCellView: NSTableCellView {
     func setFromEntry(entry: Entry) {
         descriptionTextField.stringValue = entry.description
     }
+    
+    @IBAction func clickTimeEntryButton(sender: AnyObject) {
+        println("click")
+    }
 }
