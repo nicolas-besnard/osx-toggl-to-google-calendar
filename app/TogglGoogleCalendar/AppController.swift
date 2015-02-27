@@ -42,19 +42,4 @@ class AppController: NSObject {
             }
         }
     }
-    
-    func google() {
-        println("google")
-        let controller = GTMOAuth2WindowController(
-            scope: "https://www.googleapis.com/auth/calendar",
-            clientID: "aze",
-            clientSecret: "aze",
-            keychainItemName: "aze",
-            resourceBundle: nil
-        )
-        
-        controller.signInSheetModalForWindow(mainWindow, completionHandler: { (auth: GTMOAuth2Authentication!, error: NSError!) -> Void in
-            Context.shared.user.auth = auth
-        })
-    }
 }

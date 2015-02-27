@@ -83,6 +83,10 @@ class User {
         return calendarService
     }
     
+    func logout() {
+        token = nil
+    }
+    
     func setDataFromLogin(json: JSON) {
         let jsonData = json["data"]
         let token = jsonData["api_token"].stringValue

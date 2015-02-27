@@ -11,6 +11,8 @@
 		3739D0FE1AA0D82000D5AD28 /* TimeEntryTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3739D0FD1AA0D82000D5AD28 /* TimeEntryTableView.swift */; };
 		3739D1041AA0D85200D5AD28 /* TimeEntryCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3739D1031AA0D85200D5AD28 /* TimeEntryCellView.xib */; };
 		3739D1081AA0D88100D5AD28 /* TimeEntryCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3739D1071AA0D88100D5AD28 /* TimeEntryCellView.swift */; };
+		373F7BFD1AA10A720096D69B /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373F7BFB1AA10A720096D69B /* PreferencesWindowController.swift */; };
+		373F7BFE1AA10A720096D69B /* PreferencesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 373F7BFC1AA10A720096D69B /* PreferencesWindowController.xib */; };
 		3749A77B1A9F30AD0071F13F /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3749A7791A9F30AD0071F13F /* MainWindowController.swift */; };
 		3749A77C1A9F30AD0071F13F /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3749A77A1A9F30AD0071F13F /* MainWindowController.xib */; };
 		3749A77F1A9F32B10071F13F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3749A77D1A9F32B10071F13F /* LoginViewController.swift */; };
@@ -94,6 +96,8 @@
 		3739D0FD1AA0D82000D5AD28 /* TimeEntryTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeEntryTableView.swift; sourceTree = "<group>"; };
 		3739D1031AA0D85200D5AD28 /* TimeEntryCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimeEntryCellView.xib; sourceTree = "<group>"; };
 		3739D1071AA0D88100D5AD28 /* TimeEntryCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeEntryCellView.swift; sourceTree = "<group>"; };
+		373F7BFB1AA10A720096D69B /* PreferencesWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
+		373F7BFC1AA10A720096D69B /* PreferencesWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesWindowController.xib; sourceTree = "<group>"; };
 		3749A7791A9F30AD0071F13F /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		3749A77A1A9F30AD0071F13F /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
 		3749A77D1A9F32B10071F13F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -185,6 +189,8 @@
 			children = (
 				3749A7791A9F30AD0071F13F /* MainWindowController.swift */,
 				3749A77A1A9F30AD0071F13F /* MainWindowController.xib */,
+				373F7BFB1AA10A720096D69B /* PreferencesWindowController.swift */,
+				373F7BFC1AA10A720096D69B /* PreferencesWindowController.xib */,
 			);
 			path = WindowController;
 			sourceTree = "<group>";
@@ -446,6 +452,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				373F7BFE1AA10A720096D69B /* PreferencesWindowController.xib in Resources */,
 				3749A7801A9F32B10071F13F /* LoginViewController.xib in Resources */,
 				3739D1041AA0D85200D5AD28 /* TimeEntryCellView.xib in Resources */,
 				377B4B861A97D5EF0064AABD /* Images.xcassets in Resources */,
@@ -523,6 +530,7 @@
 				37B5F0701A9EA63900D9AB03 /* String.swift in Sources */,
 				3749A77B1A9F30AD0071F13F /* MainWindowController.swift in Sources */,
 				37A34BD21A9D38E50032AA83 /* Environment.swift in Sources */,
+				373F7BFD1AA10A720096D69B /* PreferencesWindowController.swift in Sources */,
 				37E02B711A9CFCF6005E1044 /* GTLCalendar_Sources.m in Sources */,
 				3749A7851A9F700B0071F13F /* TimeEntryViewController.swift in Sources */,
 				377B4B841A97D5EF0064AABD /* AppDelegate.swift in Sources */,
