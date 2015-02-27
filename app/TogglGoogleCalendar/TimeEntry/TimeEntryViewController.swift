@@ -14,12 +14,20 @@ class TimeEntryViewController: NSViewController, NSTableViewDelegate, NSTableVie
     @IBOutlet weak var timeEntryTableView: TimeEntryTableView!
     
     var timeEntryCellViewNib: NSNib!
+    var entries = Context.shared.entries
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         timeEntryTableView.registerNib(timeEntryCellViewNib, forIdentifier: "TimeEntryCellView")
         Context.shared.userService.getTimEntry()
+        
+        NSNotificationCenter.defaultCenter().addObserver(
+            timeEntryTableView,
+            selector: "reloadData",
+            name: "entriesUpdatedNotification",
+            object: nil
+        )
     }
     
     override func loadView() {
@@ -39,7 +47,7 @@ class TimeEntryViewController: NSViewController, NSTableViewDelegate, NSTableVie
 
     
     func numberOfRowsInTableView(tableView: NSTableView) -> Int {
-        return 5
+        return entries.count()
     }
     
 }

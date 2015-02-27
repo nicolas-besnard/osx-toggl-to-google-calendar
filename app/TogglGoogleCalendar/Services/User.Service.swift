@@ -38,7 +38,7 @@ class UserService: BaseService {
                 
                 let json = JSON(response)
                 
-                println(response)
+                Context.shared.entries.getFromJSON(json)
                 
         }) { (operation, error) -> Void in
             println("-- ERROR --")

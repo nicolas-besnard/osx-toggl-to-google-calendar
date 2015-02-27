@@ -30,6 +30,8 @@
 		37A34BD21A9D38E50032AA83 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A34BD11A9D38E50032AA83 /* Environment.swift */; };
 		37B5F06D1A9EA30E00D9AB03 /* GTL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B5F06C1A9EA30E00D9AB03 /* GTL.framework */; };
 		37B5F0701A9EA63900D9AB03 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5F06F1A9EA63900D9AB03 /* String.swift */; };
+		37BC8BA51AA0E4C9004ACDAC /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BC8BA41AA0E4C9004ACDAC /* Entry.swift */; };
+		37BC8BAB1AA0E4D1004ACDAC /* Entries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BC8BAA1AA0E4D1004ACDAC /* Entries.swift */; };
 		37E02B711A9CFCF6005E1044 /* GTLCalendar_Sources.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E02B3B1A9CFCF6005E1044 /* GTLCalendar_Sources.m */; };
 		37E3A99A1A990C0E00375DB5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E3A9991A990C0E00375DB5 /* User.swift */; };
 		37EF9E821A991308001EC5C4 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EF9E811A991308001EC5C4 /* Context.swift */; };
@@ -117,6 +119,8 @@
 		37B5F0581A9EA24200D9AB03 /* GTL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GTL.xcodeproj; path = ../Source/GTL.xcodeproj; sourceTree = "<group>"; };
 		37B5F06C1A9EA30E00D9AB03 /* GTL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GTL.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/TogglGoogleCalendar-grqzfjjijjhcejfyrkmosaqopgza/Build/Products/Debug/GTL.framework"; sourceTree = "<group>"; };
 		37B5F06F1A9EA63900D9AB03 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = String.swift; path = ../String.swift; sourceTree = "<group>"; };
+		37BC8BA41AA0E4C9004ACDAC /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		37BC8BAA1AA0E4D1004ACDAC /* Entries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entries.swift; sourceTree = "<group>"; };
 		37E02B3B1A9CFCF6005E1044 /* GTLCalendar_Sources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLCalendar_Sources.m; path = Calendar/GTLCalendar_Sources.m; sourceTree = "<group>"; };
 		37E02B3C1A9CFCF6005E1044 /* GTLCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTLCalendar.h; path = Calendar/GTLCalendar.h; sourceTree = "<group>"; };
 		37E3A9951A98FB0A00375DB5 /* TogglGoogleCalendar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TogglGoogleCalendar-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -305,6 +309,8 @@
 			children = (
 				37E3A9991A990C0E00375DB5 /* User.swift */,
 				37A34BC91A9D16A80032AA83 /* GoogleCalendar.swift */,
+				37BC8BA41AA0E4C9004ACDAC /* Entry.swift */,
+				37BC8BAA1AA0E4D1004ACDAC /* Entries.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -511,7 +517,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37BC8BAB1AA0E4D1004ACDAC /* Entries.swift in Sources */,
 				37E3A99A1A990C0E00375DB5 /* User.swift in Sources */,
+				37BC8BA51AA0E4C9004ACDAC /* Entry.swift in Sources */,
 				37B5F0701A9EA63900D9AB03 /* String.swift in Sources */,
 				3749A77B1A9F30AD0071F13F /* MainWindowController.swift in Sources */,
 				37A34BD21A9D38E50032AA83 /* Environment.swift in Sources */,

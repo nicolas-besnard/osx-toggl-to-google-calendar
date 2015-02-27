@@ -18,6 +18,7 @@ class Context {
     }
     
     // Service
+    let entries = Entries()
     let environment = Environment(setEnv: .DEVELOPMENT)
     let user = User()
     var userService: UserService!
