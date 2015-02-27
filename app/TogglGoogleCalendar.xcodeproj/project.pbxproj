@@ -163,10 +163,10 @@
 			isa = PBXGroup;
 			children = (
 				3749A7831A9F700B0071F13F /* TimeEntryViewController.swift */,
-				3749A7841A9F700B0071F13F /* TimeEntryViewController.xib */,
 				3739D0FD1AA0D82000D5AD28 /* TimeEntryTableView.swift */,
-				3739D1031AA0D85200D5AD28 /* TimeEntryCellView.xib */,
 				3739D1071AA0D88100D5AD28 /* TimeEntryCellView.swift */,
+				3749A7841A9F700B0071F13F /* TimeEntryViewController.xib */,
+				3739D1031AA0D85200D5AD28 /* TimeEntryCellView.xib */,
 			);
 			path = TimeEntry;
 			sourceTree = "<group>";

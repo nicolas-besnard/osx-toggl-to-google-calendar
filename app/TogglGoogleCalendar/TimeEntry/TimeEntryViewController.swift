@@ -38,6 +38,8 @@ class TimeEntryViewController: NSViewController, NSTableViewDelegate, NSTableVie
     func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
         var cell: TimeEntryCellView!
         cell = tableView.makeViewWithIdentifier("TimeEntryCellView", owner: self) as TimeEntryCellView
+        cell.setFromEntry(entries[row])
+        
         return cell
     }
     

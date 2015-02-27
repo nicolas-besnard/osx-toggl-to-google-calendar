@@ -9,11 +9,9 @@
 import Cocoa
 
 class TimeEntryCellView: NSTableCellView {
-
-    override func drawRect(dirtyRect: NSRect) {
-        super.drawRect(dirtyRect)
-
-        // Drawing code here.
-    }
+    @IBOutlet weak var descriptionTextField: NSTextField!
     
+    func setFromEntry(entry: Entry) {
+        descriptionTextField.stringValue = entry.description
+    }
 }

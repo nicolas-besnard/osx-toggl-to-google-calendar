@@ -31,4 +31,8 @@ class Entries {
         }
         NSNotificationCenter.defaultCenter().postNotificationName("entriesUpdatedNotification", object: nil)
     }
+    
+    subscript(index: Int) -> Entry! {
+        return data[index]
+    }
 }
