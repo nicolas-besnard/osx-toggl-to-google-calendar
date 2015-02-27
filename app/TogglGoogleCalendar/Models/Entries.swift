@@ -29,7 +29,15 @@ class Entries {
             var newEntry = Entry(json: entry)
             add(newEntry)
         }
-        data.sort { $0.at.timeIntervalSinceNow > $1.at.timeIntervalSinceNow }
+        data.sort {
+            if $0.isRunning && $1.isRunning == false {
+                return true
+            }
+            else if $0.isRunning == false && $1.isRunning {
+                return false
+            }
+            return $0.stop.timeIntervalSinceNow > $1.stop.timeIntervalSinceNow
+        }
         NSNotificationCenter.defaultCenter().postNotificationName("entriesUpdatedNotification", object: nil)
     }
     
