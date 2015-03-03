@@ -10,8 +10,7 @@ import Foundation
 
 class Environment
 {
-    enum Type: Int
-    {
+    enum Type: Int {
         case PRODUCTION, DEVELOPMENT
     }
     
@@ -20,18 +19,15 @@ class Environment
     let clientSecret = ""
     let keychainItem = "Toggl to Google Calendar"
     
-    init(setEnv env: Type)
-    {
+    init(setEnv env: Type) {
         self.value = env
     }
     
-    func isProduction() -> Bool
-    {
+    func isProduction() -> Bool {
         return self.value == .PRODUCTION
     }
     
-    func isDevelopment() -> Bool
-    {
+    func isDevelopment() -> Bool {
         return self.value == .DEVELOPMENT
     }
 }
