@@ -35,16 +35,27 @@ class Entry {
         self.at = getFormattedDate(at)
     }
     
-    private func getFormattedDate(stringDate: String!) -> NSDate! {
-        if stringDate == nil || stringDate.length == 0 {
-            return nil
-        }
-        
-        var dateFormatter = NSDateFormatter()
-        dateFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
-        dateFormatter.timeZone = NSTimeZone.localTimeZone()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZ"
+//    private func getFormattedDate(stringDate: String!) -> NSDate! {
+//        if stringDate == nil || stringDate.length == 0 {
+//            return nil
+//        }
+//        
+//        var dateFormatter = NSDateFormatter()
+//        dateFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
+//        dateFormatter.timeZone = NSTimeZone.localTimeZone()
+//        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZ"
+//
+//        return dateFormatter.dateFromString(stringDate)!
+//    }
+}
 
-        return dateFormatter.dateFromString(stringDate)!
+extension Entry {
+    private func getFormattedDate(date: String) -> NSDate? {
+        var dateFormatter = NSDateFormatter()
+        
+        dateFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
+        dateFormatter.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ssZZZZZ"
+        
+        return dateFormatter.dateFromString(date)
     }
 }

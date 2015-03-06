@@ -12,9 +12,12 @@ class TimeEntryViewController: NSViewController, NSTableViewDelegate, NSTableVie
 
     @IBOutlet var contentView: NSView!
     @IBOutlet weak var timeEntryTableView: TimeEntryTableView!
+    @IBOutlet weak var header: NSView!
     
     var timeEntryCellViewNib: NSNib!
     var entries = Context.shared.entries
+    
+    var timeEntryHeaderViewController: TimeEntryHeaderViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +36,9 @@ class TimeEntryViewController: NSViewController, NSTableViewDelegate, NSTableVie
     override func loadView() {
         super.loadView()
         timeEntryCellViewNib = NSNib(nibNamed: "TimeEntryCellView", bundle: nil)
+        
+        timeEntryHeaderViewController = TimeEntryHeaderViewController(nibName: "TimeEntryHeaderViewController", bundle: nil)
+        header.addSubview(timeEntryHeaderViewController!.view)
     }
     
     func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {

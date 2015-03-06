@@ -19,13 +19,16 @@ class Context {
     
     // Service
     let entries = Entries()
+    var currentEntry: Entry!
     let environment = Environment(setEnv: .DEVELOPMENT)
-    let user = User()
+    var user: User!
     var userService: UserService!
-    let googleCalendar = GoogleCalendar()
+    var googleCalendar: GoogleCalendar!
     
     
     func setup() {
+        user = User()
         userService = UserService(user: user)
+        googleCalendar = GoogleCalendar()
     }
 }

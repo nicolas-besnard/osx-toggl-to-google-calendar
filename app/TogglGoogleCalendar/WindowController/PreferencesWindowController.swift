@@ -34,6 +34,9 @@ class PreferencesWindowController: NSWindowController {
                 Context.shared.user.auth = auth
                 self.toggleSignInWithGoogleButton()
             })
+        } else {
+            Context.shared.user.logout()
+            self.toggleSignInWithGoogleButton()
         }
     }
     

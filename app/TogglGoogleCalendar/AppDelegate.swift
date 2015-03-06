@@ -61,7 +61,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserInterfaceValidations {
         let tag = anItem.tag()
         
         if tag == menuItemTagRequireLogin {
-            return user.isSignedIn()
+            return Context.shared.user.isSignedIn()
         } else if tag == menuItemTagAlways {
             return true
         }
@@ -121,7 +121,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserInterfaceValidations {
     
     func showWindow() {
         mainWindowController.showWindow(self)
-        if (user.isSignedIn()) {
+        if (Context.shared.user.isSignedIn()) {
             NSNotificationCenter.defaultCenter().postNotificationName("showEntryListNotification", object: nil)
         } else {
             NSNotificationCenter.defaultCenter().postNotificationName("showLoginNotification", object: nil)

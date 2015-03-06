@@ -62,7 +62,9 @@ class User {
         }
     }
 
-    init() {}
+    init() {
+        getTokenFromKeychain()
+    }
     
     func isSignedIn() -> Bool {
         return token != nil
@@ -78,13 +80,17 @@ class User {
     }
     
     func getCalendarService() -> GTLServiceCalendar {
+        getTokenFromKeychain()
         calendarService.authorizer = auth
         
         return calendarService
     }
     
     func logout() {
-        token = nil
+        GTMOAuth2WindowController.revokeTokenForGoogleAuthentication(auth)
+        GTMOAuth2WindowController.removeAuthFromKeychainForName(Context.shared.environment.keychainItem)
+        
+//        token = nil
     }
     
     func setDataFromLogin(json: JSON) {
@@ -111,6 +117,7 @@ class User {
                 clientID: clientID,
                 clientSecret: clientSecret
             )
+            calendarService.authorizer = auth
         }
     }
 }

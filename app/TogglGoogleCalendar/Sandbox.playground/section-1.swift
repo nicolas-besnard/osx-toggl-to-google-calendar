@@ -26,17 +26,21 @@ extension String {
         return NSPredicate(format: "SELF MATCHES %@", emailRegex)!.evaluateWithObject(self)
     }
 }
-
-var time = "2015-02-27T20:19:37+00:00"
-
-
-//var time = "2013-03-05T07:58:58.000Z"
-
 var date = NSDateFormatter()
+
+//var time = "2015-03-05T23:18:13+00:00"
+date.locale = NSLocale(localeIdentifier: "en_US_POSIX")
+
+
+// W O R K I N G
+//var time = "2013-03-05T07:58:58.000Z"
 //date.dateFormat = "yyyy-MM-dd'T'hh:mm:ss.SSS'Z'"
-time
-date.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZ"
+
+var time = "2015-03-06T23:18:17Z"
+//date.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+date.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ssZZZZZ"
 date.dateFromString(time)
+
 date.description
 
 NSTimeZone(name: "Europe/London")?.abbreviation

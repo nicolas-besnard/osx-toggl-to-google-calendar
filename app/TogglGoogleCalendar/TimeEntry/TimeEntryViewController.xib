@@ -4,9 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="EntryListViewController" customModule="TogglGoogleCalendar" customModuleProvider="target">
+        <customObject id="-2" userLabel="File's Owner" customClass="TimeEntryViewController" customModule="TogglGoogleCalendar" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="Hz6-mo-xeY" id="pnp-V5-CTP"/>
+                <outlet property="header" destination="xhv-Pd-4Ts" id="lYK-4I-JJE"/>
                 <outlet property="timeEntryTableView" destination="BSM-Ek-bPg" id="bPS-Rw-JW0"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
@@ -18,7 +19,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <scrollView ambiguous="YES" misplaced="YES" autohidesScrollers="YES" horizontalLineScroll="17" horizontalPageScroll="10" verticalLineScroll="17" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJM-oM-i03">
-                    <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
+                    <rect key="frame" x="0.0" y="0.0" width="400" height="206"/>
                     <clipView key="contentView" ambiguous="YES" misplaced="YES" id="KHl-Uf-wyJ">
                         <rect key="frame" x="1" y="0.0" width="238" height="134"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -79,6 +80,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>
+                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xhv-Pd-4Ts">
+                    <rect key="frame" x="0.0" y="214" width="400" height="86"/>
+                </customView>
             </subviews>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="uJM-oM-i03" secondAttribute="bottom" id="WIb-Of-J2Y"/>

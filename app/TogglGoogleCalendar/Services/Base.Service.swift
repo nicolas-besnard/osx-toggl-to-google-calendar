@@ -10,13 +10,12 @@ import Foundation
 import AFNetworking
 
 class BaseService {
-    let manager = AFHTTPRequestOperationManager()
+    var manager: AFHTTPRequestOperationManager!
     
     init() {
+        manager = AFHTTPRequestOperationManager()
         manager.responseSerializer = AFJSONResponseSerializer()
-        manager.requestSerializer = AFHTTPRequestSerializer()
-        
-        manager.requestSerializer.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        manager.requestSerializer = AFJSONRequestSerializer(writingOptions: NSJSONWritingOptions.allZeros)
     }
     
     func setUserAuthorization(email: String, password: String) {
