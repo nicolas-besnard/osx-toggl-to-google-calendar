@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="button" destination="Bdd-TL-Qdq" id="Mof-Bc-alf"/>
                 <outlet property="entryNameTextField" destination="4Rc-1L-L5k" id="wXG-0Z-sFl"/>
+                <outlet property="timerLabel" destination="Gsg-dv-D9m" id="8nK-gd-MZI"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -38,16 +39,14 @@
                         <action selector="entryNameAction:" target="-2" id="MYt-lc-e8J"/>
                     </connections>
                 </textField>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mQ4-bb-aIz">
-                    <rect key="frame" x="226" y="-4" width="82" height="32"/>
-                    <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="lv1-bK-Gkr">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gsg-dv-D9m">
+                    <rect key="frame" x="308" y="8" width="74" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="V4k-Oe-zYU">
                         <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="getCalendar:" target="-2" id="2IQ-cA-Keg"/>
-                    </connections>
-                </button>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
             </subviews>
         </customView>
     </objects>

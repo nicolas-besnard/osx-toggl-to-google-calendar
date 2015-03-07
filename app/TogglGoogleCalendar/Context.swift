@@ -19,7 +19,14 @@ class Context {
     
     // Service
     let entries = Entries()
-    var currentEntry: Entry!
+    var currentEntry: Entry! = nil {
+        didSet {
+            NSNotificationCenter
+                .defaultCenter()
+                .postNotificationName("changeCurrentEntryNotification", object: self.currentEntry)
+        }
+    }
+    
     let environment = Environment(setEnv: .DEVELOPMENT)
     var user: User!
     var userService: UserService!

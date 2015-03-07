@@ -28,7 +28,12 @@ class Entries {
         for (index, entry) in json {
             var newEntry = Entry(json: entry)
             add(newEntry)
+            
+            if newEntry.isRunning {
+                Context.shared.currentEntry = newEntry
+            }
         }
+        
         data.sort {
             if $0.isRunning && $1.isRunning == false {
                 return true

@@ -12,7 +12,7 @@ class GoogleCalendar {
     var calendars: [GTLCalendarCalendarListEntry] = []
     
     init() {
-//        getRemoteCalendars()
+        getRemoteCalendars()
     }
     
     func setCalendars(calendars: GTLCalendarCalendarList) {

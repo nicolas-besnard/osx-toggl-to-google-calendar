@@ -90,7 +90,7 @@ class User {
         GTMOAuth2WindowController.revokeTokenForGoogleAuthentication(auth)
         GTMOAuth2WindowController.removeAuthFromKeychainForName(Context.shared.environment.keychainItem)
         
-//        token = nil
+        token = nil
     }
     
     func setDataFromLogin(json: JSON) {

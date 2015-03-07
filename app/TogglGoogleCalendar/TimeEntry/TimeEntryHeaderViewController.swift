@@ -12,32 +12,69 @@ class TimeEntryHeaderViewController: NSViewController {
 
     @IBOutlet weak var entryNameTextField: NSTextField!
     @IBOutlet weak var button: NSButtonCell!
+    @IBOutlet weak var timerLabel: NSTextField!
     
-    var currentEntry = Context.shared.currentEntry
+    var timer: NSTimer!
+    
+    var currentEntry: Entry!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         button.title = "Start"
         
+        NSNotificationCenter
+            .defaultCenter()
+            .addObserver(
+                self,
+                selector: "changeCurrentEntry:",
+                name: "changeCurrentEntryNotification",
+                object: nil
+        )
     }
     
-    @IBAction func getCalendar(sender: AnyObject) {
-        Context.shared.googleCalendar.getRemoteCalendars()
+    func timerFired(timer: NSTimer) {
+        timerLabel.stringValue = currentEntry.printableDuration()
     }
+    
+    func changeCurrentEntry(notification: NSNotification) {
+        if let entry = notification.object as? Entry {
+            currentEntry = entry
+        } else {
+            currentEntry = nil
+        }
+        toggleButton()
+    }
+    
+    func toggleButton() {
+        if currentEntry != nil && currentEntry.isRunning {
+            button.title = "stop"
+            entryNameTextField.editable = false
+            entryNameTextField.stringValue = currentEntry.description
+            timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "timerFired:", userInfo: nil, repeats: true)
+        } else {
+            button.title = "start"
+            entryNameTextField.editable = true
+            entryNameTextField.stringValue = ""
+            timer.invalidate()
+            timer = nil
+            timerLabel.stringValue = "00:00:00"
+        }
+    }
+    
     @IBAction func clickButton(sender: AnyObject) {
         println("click")
         println("currentEntry")
-        if Context.shared.currentEntry != nil {
-            println("stop")
-            Context.shared.userService.stopEntry(Context.shared.currentEntry)
+        if currentEntry != nil {
+            Context.shared.userService.stopEntry(currentEntry)
         }
     }
     
     @IBAction func entryNameAction(sender: AnyObject) {
-        let entryName = entryNameTextField.stringValue
+        if entryNameTextField.editable {
+            let entryName = entryNameTextField.stringValue
         
-        button.title = "stop"
-        println("Start entry")
-        Context.shared.userService.startNewEntry(entryName)
+            println("Start entry")
+            Context.shared.userService.startNewEntry(entryName)
+        }
     }
 }

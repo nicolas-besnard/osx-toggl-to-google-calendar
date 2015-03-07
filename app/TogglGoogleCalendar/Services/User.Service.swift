@@ -62,27 +62,9 @@ class UserService: BaseService {
                 println("SUCCESS STOP")
                 println(json)
                 
-//                let start = json["data"]["start"].string!
-//                let stop = json["data"]["stop"].string!
-//                
-//                var date = NSDateFormatter()
-//                date.dateFormat = "yyyy-MM-dd'T'hh:mm:ss.SSS'Z'"
                 let entry = Entry(json: json["data"])
                 Context.shared.googleCalendar.addEventFromEntry(entry)
-
-                
-//                if let stopNSDate = date.dateFromString(stop) {
-//                    println("OK stop")
-//                } else {
-//                    println("FAIL stop")
-//                }
-//                
-//                if let startNSDate = date.dateFromString(start) {
-//                    println("OK start")
-//                } else {
-//                    println("FAIL start")
-//                }
-                
+                Context.shared.currentEntry = nil
             }) { (operation, error) -> Void in
                 println("-- ERROR --")
                 println(error)
